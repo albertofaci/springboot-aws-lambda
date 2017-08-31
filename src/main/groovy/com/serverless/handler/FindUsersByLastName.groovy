@@ -26,9 +26,15 @@ class FindUsersByLastName implements Handler {
   @Override
   Response respond(final Request request) {
     def customers = userRepository.findByLastName(request.pathParameter('lastName'))
-    Response.builder()
-        .statusCode(200)
-        .body(JsonOutput.prettyPrint(JsonOutput.toJson(customers)))
-        .build()
+    if(customers) {
+      Response.builder()
+              .statusCode(200)
+              .body(JsonOutput.prettyPrint(JsonOutput.toJson(customers)))
+              .build()
+    } else {
+      Response.builder()
+              .statusCode(404).build()
+    }
+
   }
 }
