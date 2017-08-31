@@ -8,6 +8,9 @@ Note: This example uses an in-memory H2 database that is created and initialized
 - Create an [Amazon Web Services](https://aws.amazon.com) account
 - Install and set-up [Serverless Framework CLI](https://serverless.com)
 - Install [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+- Install serverless: npm install -g serverless
+- Install localstack: pip3 install localstack
+- Export AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY
 
 ### Build and Deploy
 - To build, run `./gradlew clean build`
