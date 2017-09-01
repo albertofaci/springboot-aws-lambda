@@ -17,8 +17,11 @@ dependencies {
       'org.codehaus.groovy:groovy-all:2.4.7',
       'com.amazonaws:aws-lambda-java-core:1.1.0',
       'com.amazonaws:aws-lambda-java-log4j:1.0.0',
-      'com.h2database:h2'
+      'com.h2database:h2',
+      'com.amazonaws.serverless:aws-serverless-java-container-spring:0.7'
+
   )
+
 
   // Use JUnit test framework
   testCompile 'junit:junit:4.12'
